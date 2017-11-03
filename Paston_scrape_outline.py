@@ -1,5 +1,24 @@
 # - scrape main page with BS to get list of URLs using the "a" items [href?]
 
+import requests, json
+
+home_page = requests.get("http://name.umdl.umich.edu/Paston")
+
+#print(page.content)
+
+from bs4 import BeautifulSoup
+soup = BeautifulSoup(home_page.content, 'html.parser')
+
+writer = soup.find_all("span", attrs = {"class": "divhead"})
+
+for variable in writer:
+    full_link = variable.find("a")
+    if full_link.has_attr("href"):
+
+        #need to do a second scrape and just do "find" as opposed to "findall" to pull out first link in each section
+        if ("div", attrs = "class":"resindentlevelx")
+            print(full_link.attrs["href"])
+
 
 
 #     - put URLs into a list
@@ -10,14 +29,14 @@
 
 
 
-#     - scrape each URL and pull out the h2, h3, and p as described in the original PAston scrape, putting it into a dictionary
+#     - scrape each URL and pull out the h2, h3, and p as described in the original Paston scrape, putting it into a dictionary
 
 
-#     - create a JSON file that enters sections in the dictionary
+#     - create a csv file that enters sections in the dictionary
 
 
 
-#         - once this file is made, I think I can use regex to pull out specific sections I want, like date and recipient; I think I could also then put the p sections through something, like put it all together and then search each section for the subject terms
+#Next week:         - once this file is made, I think I can use regex to pull out specific sections I want, like date and recipient; I think I could also then put the p sections through something, like put it all together and then search each section for the subject terms
 
 
 
