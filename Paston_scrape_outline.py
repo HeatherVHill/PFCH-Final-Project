@@ -11,17 +11,48 @@ soup = BeautifulSoup(home_page.content, 'html.parser')
 
 Paston_main=[]
 
+Paston_dictionary_list = [] #want to make the list beforehand so it doesn't rewrite for every for loop
+
+letter_id_counter=1
+
 writer = soup.find_all("a", href=re.compile("rgn=div2"))
 
 for variable in writer:
      Paston_main.append(variable.attrs["href"])
 
-print(Paston_main)
+for individual_link in Paston_main:
+    link_request = requests.get(individual_link)
+    link_request_content = BeautifulSoup(link_request.content,'html.parser')
+    all_divs = link_request_content.find_all("div", attrs = {"class": "textindentlevelx"})
+
+    for new_variable in all_divs:
+        # first_person = variable.find("h2")
+        # a_writer = first_person.text
+
+        try:
+            a_person = new_variable.find("h3")
+            a_name = a_person.text
+            print(a_name)
+        except:
+            print("No recipient")
+
+#         a_content = variable.find_all("p")
+#         more_variables=""
+#         for some_content in a_content:
+#              more_variables = more_variables + some_content.text
+#
+#         new_dictionary={"Writer":a_writer,"Recipient":a_name,"Letter ID:":id_counter,"Letter URL":individual_link,"Content":more_variables}
+#         Paston_dictionary_list.append(new_dictionary)
+#         id_counter = id_counter + 1
+# json.dump(blank_list,open("Paston_Letters.json","w"),indent=4)
+
+    # a_person = individual_link.find("h3")
+    # a_name = a_person.text
 
 
 #Add code to pull out pieces you want based on old code
 #Put code in JSON file
-#Use regex in JSON file to break down date and names
+#Use regex in JSON file to break down date and names (could pull just things that begin with "To..." since those will actually be letters, not wills or charters)
 
 
 #writer = soup.find_all("div", attrs = {"class": "indentlevel1"})
