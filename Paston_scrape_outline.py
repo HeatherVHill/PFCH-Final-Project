@@ -20,34 +20,32 @@ for variable in writer:
 
 for individual_link in Paston_main:
     link_request = requests.get(individual_link)
+    print("On page",individual_link,"of")
     link_request_content = BeautifulSoup(link_request.content,'html.parser')
 
     first_person_span = link_request_content.find("span", attrs={"class":"divhead"})
     first_person = first_person_span.find("a")
     a_writer = first_person.text
-    print(a_writer)
 
     all_divs = link_request_content.find_all("div", attrs = {"class": "textindentlevelx"})
 
     for new_variable in all_divs:
 
-
         try:
             a_person = new_variable.find("h3")
             a_name = a_person.text
-            print(a_name)
         except:
-            print("No recipient")
-#-------------Works above here-----------
-#         a_content = new_variable.find_all("p")
-#         more_variables=""
-#         for some_content in a_content:
-#              more_variables = more_variables + some_content.text
-#
-#         new_dictionary={"Writer":a_writer,"Recipient":a_name,"Letter ID:":id_counter,"Letter URL":individual_link,"Content":more_variables}
-#         Paston_dictionary_list.append(new_dictionary)
-#         id_counter = id_counter + 1
-# json.dump(blank_list,open("Paston_Letters.json","w"),indent=4)
+            a_name = "No recipient information"
+
+        a_content = new_variable.find_all("p")
+        letter_content=""
+        for some_content in a_content:
+             letter_content = letter_content + some_content.text
+
+        new_dictionary={"Writer":a_writer,"Recipient":a_name,"Letter ID:":letter_id_counter,"Letter URL":individual_link,"Content":letter_content}
+        Paston_dictionary_list.append(new_dictionary)
+        letter_id_counter = letter_id_counter + 1
+json.dump(Paston_dictionary_list,open("Paston_Letters.json","w"),indent=4)
 
 #-----------------------------------
     # a_person = individual_link.find("h3")
