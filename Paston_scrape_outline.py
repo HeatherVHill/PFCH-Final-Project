@@ -1,6 +1,6 @@
 # - scrape main page with BS to get list of URLs using the "a" items [href?]
 
-import requests, json
+import requests, json, re
 
 home_page = requests.get("http://name.umdl.umich.edu/Paston")
 
@@ -9,19 +9,50 @@ home_page = requests.get("http://name.umdl.umich.edu/Paston")
 from bs4 import BeautifulSoup
 soup = BeautifulSoup(home_page.content, 'html.parser')
 
-writer = soup.find_all("span", attrs = {"class": "divhead"})
+Paston_main=[]
+
+writer = soup.find_all("a", href=re.compile("rgn=div2"))
 
 for variable in writer:
-    full_link = variable.find("a")
-    if full_link.has_attr("href"):
+     Paston_main.append(variable.attrs["href"])
+
+print(Paston_main)
+
+
+#Add code to pull out pieces you want based on old code
+#Put code in JSON file
+#Use regex in JSON file to break down date and names
+
+
+#writer = soup.find_all("div", attrs = {"class": "indentlevel1"})
+
+
+# for variable in writer:
+#     full_link = variable.find("a")
+#     if full_link.has_attr("href"):
+#         Paston_main.append(full_link.attrs["href"])
+#
+# Paston_main_set = set(Paston_main)
+#
+# Paston_full_links = []
+#
+# for variable in writer:
+#     full_link_all = variable.findall("a")
+#     if full_link_all.has_attr("href"):
+#         Paston_full_links.append(full_link_all.attrs["href"])
+#
+
+        # individual_link = full_link.find("div",attrs = {"class":"resindentlevelx"})
+        # print(individual_link)
 
         #need to do a second scrape and just do "find" as opposed to "findall" to pull out first link in each section
-        if ("div", attrs = "class":"resindentlevelx")
-            print(full_link.attrs["href"])
+#        if ("div", attrs = "class":"resindentlevelx")
+#            print(full_link.attrs["href"])
 
 
 
 #     - put URLs into a list
+#link_list = []
 
 
 
