@@ -42,7 +42,7 @@ for individual_link in Paston_main:
         for some_content in a_content:
              letter_content = letter_content + some_content.text
 
-        new_dictionary={"Writer":a_writer,"Recipient":a_name,"Letter ID:":letter_id_counter,"Letter URL":individual_link,"Content":letter_content}
+        new_dictionary={"Writer":a_writer,"Recipient":a_name,"Document ID:":letter_id_counter,"Document URL":individual_link,"Content":letter_content}
         Paston_dictionary_list.append(new_dictionary)
         letter_id_counter = letter_id_counter + 1
 json.dump(Paston_dictionary_list,open("Paston_Letters.json","w"),indent=4)
