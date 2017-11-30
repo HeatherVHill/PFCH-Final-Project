@@ -1,0 +1,7 @@
+5-star linked data:
+
+1 - Available on the web with an open license to be open data
+2 - Available as machine-readable structured data
+3 - In a non-proprietary format
+4 - Uses open standards from W3C (RDF & SPARQL) to identify things so that people can point at your stuff
+5 - link your data to other people’s data to provide context

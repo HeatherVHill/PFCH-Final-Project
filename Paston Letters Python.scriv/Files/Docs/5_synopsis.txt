@@ -1,0 +1,5 @@
+Three rules to linked data
+- Everything has an http ID
+- http protocol will give data in a standard format
+- that information has relationships
+	ex: Person bornIn Berlin inCountry Germany

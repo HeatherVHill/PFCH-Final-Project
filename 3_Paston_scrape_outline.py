@@ -34,7 +34,7 @@ for individual_link in Paston_main:
         try:
             a_person = new_variable.find("h3")
             a_string = a_person.text
-            p = re.compile('\A\D*')
+            p = re.search('\A\D*')
             a_cap_name = p.findall(a_string)
             a_name = a_cap_name.title()
         except:
@@ -43,11 +43,14 @@ for individual_link in Paston_main:
         try:
             a_person = new_variable.find("h3")
             a_string = a_person.text
-            q = re.compile("14\d*-\d*")
+            q = re.search("14\d*-\d*")
             a_year = q.findall(a_string)
         except:
-            q = re.compile("14\d*")
+            a_person = new_variable.find("h3")
+            a_string = a_person.text
+            q = re.search("14\d*")
             a_year = q.findall(a_string)
+            #a_year = "Time information unavailable"
 
 
         a_content = new_variable.find_all("p")

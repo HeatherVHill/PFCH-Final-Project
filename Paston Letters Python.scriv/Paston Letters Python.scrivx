@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ScrivenerProject Version="1.5" Creator="SCRMAC-2.8.1.2-26324" Device="heather-hills-macbook-pro" Modified="2017-11-25 14:33:45 -0500" ModID="DE7B7205-CD67-4E3B-AA1E-682112C6E9AD">
+<ScrivenerProject Version="1.5" Creator="SCRMAC-2.8.1.2-26324" Device="heather-hills-macbook-pro" Modified="2017-11-26 14:22:51 -0500" ModID="380D9B2C-90EA-433D-A0E4-3A15CE9354B6">
     <Binder>
         <BinderItem ID="0" UUID="D82012D9-8ECB-4EF9-92C0-0DC51804EBE7" Type="DraftFolder" Created="2017-11-25 14:33:17 -0500" Modified="2017-11-25 14:33:17 -0500">
             <Title>Draft</Title>
@@ -7,14 +7,14 @@
                 <IncludeInCompile>Yes</IncludeInCompile>
             </MetaData>
             <Children>
-                <BinderItem ID="3" UUID="5ACBA1A0-2690-4B4B-A1F7-8B699963E990" Type="Text" Created="2017-11-25 14:33:17 -0500" Modified="2017-11-25 14:33:17 -0500">
-                    <Title>Untitled</Title>
+                <BinderItem ID="3" UUID="5ACBA1A0-2690-4B4B-A1F7-8B699963E990" Type="Text" Created="2017-11-25 14:33:17 -0500" Modified="2017-11-26 14:09:57 -0500">
+                    <Title>References</Title>
                     <MetaData>
                         <IncludeInCompile>Yes</IncludeInCompile>
                         <NotesTextSelection>0,0</NotesTextSelection>
                     </MetaData>
                     <TextSettings>
-                        <TextSelection>0,0</TextSelection>
+                        <TextSelection>52,0</TextSelection>
                     </TextSettings>
                 </BinderItem>
             </Children>
@@ -37,6 +37,41 @@
                     <TextSettings>
                         <TextSelection>0,0</TextSelection>
                     </TextSettings>
+                    <CorkboardAndOutliner>
+                        <SelectedSubdocumentIDs>6</SelectedSubdocumentIDs>
+                    </CorkboardAndOutliner>
+                    <Children>
+                        <BinderItem ID="5" UUID="C636FB71-3682-4A6F-BEF1-C1086C05ABA3" Type="Text" Created="2017-11-26 00:46:18 -0500" Modified="2017-11-26 00:47:53 -0500">
+                            <Title>Berners-Lee, Ted Talk</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="6" UUID="A1C9659B-3A11-4A6A-B471-08D514AE5075" Type="Text" Created="2017-11-26 14:08:24 -0500" Modified="2017-11-26 14:21:13 -0500">
+                            <Title>(Berners-Lee, 2006)</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                        <BinderItem ID="7" UUID="540D31AD-FB8F-4338-9D38-420750184B3C" Type="Text" Created="2017-11-26 14:20:30 -0500" Modified="2017-11-26 14:22:51 -0500">
+                            <Title>(Jones, 2016)</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                                <NotesTextSelection>0,0</NotesTextSelection>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>0,0</TextSelection>
+                            </TextSettings>
+                        </BinderItem>
+                    </Children>
                 </BinderItem>
             </Children>
         </BinderItem>
@@ -79,7 +114,7 @@
     <ProjectTargets Notify="No">
         <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="No" Deadline="2017-11-25 14:33:12 -0500" IgnoreDeadline="Yes">0</DraftTarget>
         <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="Yes" ResetType="Midnight" DeterminedFromDeadline="No" WritingDays="" CanWriteOnDeadlineDate="No">0</SessionTarget>
-        <PreviousSession Words="0" Characters="0" Date="2017-11-25 14:33:12 -0500"></PreviousSession>
+        <PreviousSession Words="13" Characters="99" Date="2017-11-26 00:46:13 -0500"></PreviousSession>
     </ProjectTargets>
     <PrintSettings PaperSize="612.0,792.0" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="na-letter" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
 </ScrivenerProject>

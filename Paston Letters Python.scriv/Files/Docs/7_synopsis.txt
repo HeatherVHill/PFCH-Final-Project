@@ -1,0 +1,1 @@
+Triples are three-part statements that hav e a subject, predicate (describing the relationship between the subject and object), and an object. Subjects and predicates are always represented by uniform HTTP URIs, and objects will also ideally be represented by an HTML URI, though they can also be represented by a literal phrase. 
