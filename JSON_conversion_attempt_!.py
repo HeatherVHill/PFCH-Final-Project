@@ -7,5 +7,9 @@ outfile = open("Paston_Letters.csv","w")
 
 writer = csv.writer(outfile)
 
-for row in json.loads(infile.read()):
-    writer.writerow(row)
+data = json.loads(infile.read())
+
+writer.writerow(data[0].keys())  # header row
+
+for row in data:
+    writer.writerow(row.values())
