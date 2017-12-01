@@ -31,14 +31,19 @@ for individual_link in Paston_main:
 
     for new_variable in all_divs:
 
-        try:
-            a_person = new_variable.find("h3")
-            a_string = a_person.text
-            p = re.compile('\A\D*')
-            a_cap_name = p.findall(a_string)
-            a_name = a_cap_name.title()
-        except:
-            a_name = "No recipient information"
+#        try:
+        a_person = new_variable.find("h3")
+        a_string = a_person.text
+        p = re.compile('\A\D*')
+        a_cap_name = p.findall(a_string)
+
+        print(a_cap_name)
+
+        a_name = a_cap_name[0].title()
+
+        print(a_name)
+#        except:
+        a_name = "No recipient information"
 
         # try:
         #     a_person = new_variable.find("h3")
