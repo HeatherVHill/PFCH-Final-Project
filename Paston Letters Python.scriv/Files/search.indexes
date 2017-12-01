@@ -2,7 +2,33 @@
 <SearchIndexes Version="1.0">
     <Documents>
         <Document ID="3">
-            <Title>Untitled</Title>
+            <Title>References</Title>
+            <Text>Berners-Lee, T. (2006). Linked Data. Retrieved from https://www.w3.org/DesignIssues/LinkedData.html</Text>
+        </Document>
+        <Document ID="6">
+            <Title>(Berners-Lee, 2006)</Title>
+            <Synopsis>5-star linked data:
+
+1 - Available on the web with an open license to be open data
+2 - Available as machine-readable structured data
+3 - In a non-proprietary format
+4 - Uses open standards from W3C (RDF &amp; SPARQL) to identify things so that people can point at your stuff
+5 - link your data to other people’s data to provide context</Synopsis>
+        </Document>
+        <Document ID="4">
+            <Title>Unorganized Notes</Title>
+        </Document>
+        <Document ID="7">
+            <Title>(Jones, 2016)</Title>
+            <Synopsis>Triples are three-part statements that hav e a subject, predicate (describing the relationship between the subject and object), and an object. Subjects and predicates are always represented by uniform HTTP URIs, and objects will also ideally be represented by an HTML URI, though they can also be represented by a literal phrase. </Synopsis>
+        </Document>
+        <Document ID="5">
+            <Title>Berners-Lee, Ted Talk</Title>
+            <Synopsis>Three rules to linked data
+- Everything has an http ID
+- http protocol will give data in a standard format
+- that information has relationships
+	ex: Person bornIn Berlin inCountry Germany</Synopsis>
         </Document>
     </Documents>
 </SearchIndexes>
