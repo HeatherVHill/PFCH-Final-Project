@@ -31,19 +31,16 @@ for individual_link in Paston_main:
 
     for new_variable in all_divs:
 
-#        try:
-        a_person = new_variable.find("h3")
-        a_string = a_person.text
-        p = re.compile('\A\D*')
-        a_cap_name = p.findall(a_string)
+        try:
+            a_person = new_variable.find("h3")
+            a_string = a_person.text
+            p = re.compile('\A\D*')
+            a_cap_name = p.findall(a_string)
+            a_trailing_name = a_cap_name[0].title()
+            a_name = a_trailing_name.rstrip()
 
-        print(a_cap_name)
-
-        a_name = a_cap_name[0].title()
-
-        print(a_name)
-#        except:
-        a_name = "No recipient information"
+        except:
+            a_name = "No recipient information"
 
         # try:
         #     a_person = new_variable.find("h3")
@@ -67,7 +64,7 @@ for individual_link in Paston_main:
         Paston_dictionary_list.append(new_dictionary)
         letter_id_counter = letter_id_counter + 1
 
-json.dump(Paston_dictionary_list,open("Paston_Letters_2.json","w"),indent=4)
+json.dump(Paston_dictionary_list,open("Paston_Letters_3.json","w"),indent=4)
 
 #If needed later, add to new_dictionary statement: "Year":a_year,
 
